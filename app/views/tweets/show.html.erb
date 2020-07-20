@@ -1,0 +1,18 @@
+<div class="contents-row">
+  <h3>
+    詳細ページ
+  </h3>
+  <p>スキー場名：<%= @tweet.name %></p>
+  <p>スキー場の説明：<%= @tweet.text %></p>
+  <p>スキー場の評価点：<%= @tweet.recommend %>点</p>
+</div>
+
+<div class="comments">
+  <h3>
+    この投稿にコメントする。
+  </h3>
+  <%= form_tag("/tweets/#{@tweet.id}/comments", method: :create) do %>
+    <textarea name="text" placeholder = "コメントする"></textarea>
+    <input type="submit" value="送信">
+  <% end %>
+</div>

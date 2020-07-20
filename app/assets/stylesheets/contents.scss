@@ -1,0 +1,26 @@
+.contents-row {
+  height: calc(100vh-200px);
+  background-color:gray; 
+}
+
+.contents-top h3 {
+  text-align:center;
+  padding-top:15px;
+}
+
+.contents-list {
+  font-size:20px;
+  text-align:center;
+  border:2px solid white;
+  border-radius:5px;
+  margin:10px 10px;
+}
+
+.contents-list a {
+  border:2px solid white;
+  padding:1px 10px;
+  border-radius:2px;
+  background-color:silver;
+  text-decoration:none;
+  box-shadow:5px 5px;
+}

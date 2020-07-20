@@ -1,0 +1,32 @@
+.header {
+  height:100px;
+  background-color:orange;
+}
+
+.header a {
+  line-height:100px;
+  margin:10px;
+  text-decoration:none;
+  border:2px solid white;
+  padding:5px;
+  border-radius:3px;
+  background-color:silver;
+  box-shadow:5px 5px;
+  opacity:1;
+}
+
+.intro-button {
+  display:inline;
+  padding-left:700px;
+}
+
+.fotter {
+  height:100px;
+  background-color:orange;
+}
+
+.fotter h3 {
+  text-align:center;
+  line-height:100px;
+  letter-spacing:2px;
+}

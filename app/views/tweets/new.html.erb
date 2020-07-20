@@ -1,0 +1,9 @@
+<%= form_tag "/tweets", method: :post do %>
+<h1>
+  スキー場情報について投稿する。
+</h1>
+  <input type="name" name="name" placeholder="ski_resorts_name">
+  <textarea type="text" name="text" rows="10" cols="30"></textarea>
+  <input type="number" name="recommend" max="10" min ="0" placeholder = "range: 0~10">
+  <input type="submit" value="送信">
+<% end %>

@@ -1,0 +1,25 @@
+<div class="contents-row">
+  <div class="contents-top">
+    <h3>
+    最近の投稿一覧
+  </h3>
+  </div>
+  
+    <% @tweets.each do |tweet| %>
+    <div class="contents-list">
+      <% if user_signed_in? && current_user.id == tweet.user_id %>
+        <%= link_to "削除", "/tweets/#{tweet.id}", method: :delete %>
+        <%= link_to "編集", "/tweets/#{tweet.id}/edit", method: :get %>
+        <%= link_to "詳細", "/tweets/#{tweet.id}", method: :get %>
+          <p>スキー場：<%= tweet.name %></p>
+            <p>スキー場の説明：<%= tweet.text %></p>
+            <p>スキー場の評価点：<%= tweet.recommend %>点</p>
+      <% else %>
+          <%= link_to "詳細", "/tweets/#{tweet.id}", method: :get %>
+          <p>スキー場：<%= tweet.name %></p>
+          <p>スキー場の説明：<%= tweet.text %></p>
+          <p>スキー場の評価点：<%= tweet.recommend %>点</p>
+      <% end %>
+    </div>
+  <% end %>
+</div>

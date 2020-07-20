@@ -1,0 +1,8 @@
+<div class="contents-row">
+  <%= form_tag("/tweets/#{@tweet.id}", method: :patch) do %>
+    <input type="name" name="name" value="<%= @tweet.name %>">
+    <textarea type="text" name="text" row="10" cols="30"><%= @tweet.text %></textarea>
+    <input type="number" max="10" min="0" name="recommend">
+    <input type="submit" value="送信">
+  <% end %>
+</div>
